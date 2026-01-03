@@ -61,23 +61,51 @@ export const processSteps = [
 export const modules = [
   {
     title: "Module Fiscal",
-    description: "Gestion TVA, Acomptes IS, distinction CA taxable/exonéré.",
-    icon: "Receipt"
+    description: "Gestion TVA, Acomptes IS, distinction CA taxable/exonéré. Conformité fiscale camerounaise garantie.",
+    icon: "Receipt",
+    tags: ["TVA 19,25%", "Acomptes IS", "Retenues"]
   },
   {
     title: "Module Social (Paie)",
-    description: "Dépouillement DIPE, calcul automatique CNPS/PVID, écritures de paie.",
-    icon: "Users"
+    description: "Dépouillement DIPE automatique, calcul CNPS/PVID, génération des écritures de paie conformes.",
+    icon: "Users",
+    tags: ["DIPE", "CNPS", "PVID"]
   },
   {
     title: "Module Commercial",
     description: "Facturation avec gestion native de la Retenue à la Source (RTS) et ventilation analytique.",
-    icon: "ShoppingCart"
+    icon: "ShoppingCart",
+    tags: ["RTS", "Facturation", "Analytique"]
   },
   {
     title: "Module Trésorerie",
-    description: "Lettrage automatique, gestion Caisse vs Banque.",
-    icon: "Wallet"
+    description: "Lettrage automatique, distinction Caisse vs Banque, rapprochement bancaire intelligent.",
+    icon: "Wallet",
+    tags: ["Lettrage", "Banque", "Caisse"]
+  },
+  {
+    title: "Plan Comptable OHADA",
+    description: "Plan comptable SYSCOHADA révisé intégré avec personnalisation par entreprise.",
+    icon: "Calculator",
+    tags: ["SYSCOHADA", "Personnalisable"]
+  },
+  {
+    title: "États Financiers",
+    description: "Génération automatique du Bilan, Compte de Résultat, et annexes conformes OHADA.",
+    icon: "FileText",
+    tags: ["Bilan", "Résultat", "Annexes"]
+  },
+  {
+    title: "Tableaux de Bord",
+    description: "Visualisation en temps réel des KPIs comptables et fiscaux de vos clients.",
+    icon: "PieChart",
+    tags: ["KPIs", "Temps réel", "Analytics"]
+  },
+  {
+    title: "Multi-Dossiers",
+    description: "Gérez tous vos clients depuis une interface unique avec isolation des données garantie.",
+    icon: "Building",
+    tags: ["Multi-clients", "Sécurisé"]
   }
 ];
 

@@ -1,17 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Receipt, Users, ShoppingCart, Wallet, Calculator, FileText, PieChart, Building } from 'lucide-react';
+import { Receipt, Users, ShoppingCart, Wallet } from 'lucide-react';
 import { modules } from '../data/mock';
 
 const iconMap = {
   Receipt: Receipt,
   Users: Users,
   ShoppingCart: ShoppingCart,
-  Wallet: Wallet,
-  Calculator: Calculator,
-  FileText: FileText,
-  PieChart: PieChart,
-  Building: Building
+  Wallet: Wallet
 };
 
 export const ModulesSection = () => {
@@ -30,14 +26,11 @@ export const ModulesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sm text-[#10B981] font-medium tracking-wider uppercase mb-4 block">
-            Fonctionnalités
-          </span>
           <h2 className="section-title text-white mb-4">
-            Tous les <span className="text-[#10B981]">Modules</span> pour votre Cabinet
+            Modules <span className="text-[#10B981]">Spécialisés</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Une suite complète d'outils conçus pour les spécificités de la comptabilité OHADA
+            Des outils puissants adaptés aux spécificités de la comptabilité OHADA
           </p>
         </motion.div>
 
@@ -54,16 +47,12 @@ export const ModulesSection = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <motion.div
-                  className="glass-card glass-card-hover p-6 h-full group flex flex-col"
+                  className="glass-card glass-card-hover p-6 h-full group"
                   whileHover={{ y: -8 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                  {/* Hover Glow */}
-                  <div className="absolute -inset-1 bg-gradient-to-br from-[#352694]/20 to-[#10B981]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  <div className="relative">
-                    {/* Icon Container */}
-                    <motion.div
+                  {/* Icon Container */}
+                  <motion.div
                     className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#352694]/50 to-[#352694]/20 flex items-center justify-center mb-5 group-hover:from-[#10B981]/50 group-hover:to-[#10B981]/20 transition-all duration-500"
                     whileHover={{ scale: 1.1, rotate: -5 }}
                   >
@@ -74,24 +63,12 @@ export const ModulesSection = () => {
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#10B981] transition-colors duration-300">
                     {module.title}
                   </h3>
-                  <p className="text-white/60 text-sm leading-relaxed mb-4 flex-grow">
+                  <p className="text-white/60 text-sm leading-relaxed">
                     {module.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {module.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-2 py-1 rounded-full bg-white/5 text-white/60 border border-white/10"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* Hover Indicator */}
-                  <div className="mt-auto pt-4 border-t border-white/10">
+                  <div className="mt-5 pt-4 border-t border-white/10">
                     <motion.div
                       className="flex items-center gap-2 text-sm text-white/40 group-hover:text-[#10B981] transition-colors duration-300"
                       initial={{ x: 0 }}
@@ -103,7 +80,6 @@ export const ModulesSection = () => {
                       </svg>
                     </motion.div>
                   </div>
-                </div>
                 </motion.div>
               </motion.div>
             );
